@@ -24,7 +24,7 @@ close $fd
 
 # -----------generate has_side_ch_flag.v------------------
 # if you want NO side_ch, please use set has_side_ch 0
-set has_side_ch 1 
+set has_side_ch 0
 set  fd  [open  "./ip_repo/has_side_ch_flag.v"  w]
 if {$has_side_ch > 0} {
   puts $fd "`define HAS_SIDE_CH 1"

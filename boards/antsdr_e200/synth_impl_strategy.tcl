@@ -513,7 +513,7 @@ set_property -name "needs_refresh" -value "0" -objects $obj
 set_property -name "part" -value "xc7z020clg400-1" -objects $obj
 set_property -name "pr_configuration" -value "" -objects $obj
 set_property -name "srcset" -value "sources_1" -objects $obj
-set_property -name "incremental_checkpoint" -value "" -objects $obj
+set_property -name "incremental_checkpoint" -value "/mnt/hostshare/seems_ok.dcp" -objects $obj
 set_property -name "auto_incremental_checkpoint" -value "0" -objects $obj
 set_property -name "incremental_checkpoint.directive" -value "" -objects $obj
 set_property -name "rqs_files" -value "" -objects $obj

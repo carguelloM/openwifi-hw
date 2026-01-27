@@ -70,9 +70,9 @@ module openofdm_tx #
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg14;
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg15;
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg16;
-    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg17;
+    */wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg17;
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg18;
-    wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg19; */
+    /*wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg19; */
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg20; // read openofdm rx core internal state
     /*
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg21;
@@ -87,11 +87,13 @@ module openofdm_tx #
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg30;
     wire [(C_S00_AXI_DATA_WIDTH-1):0] slv_reg31;
     */
+ //.ltf_from_host({slv_reg18, slv_reg17}),
 
 dot11_tx dot11_tx (
     .clk(clk),
     .phy_tx_arest((~phy_tx_arestn)|slv_reg0[0]),
-
+    //.ltf_from_host(64'b0000101001100000010100110000000000000000010101100111110101001100),
+    .ltf_from_host({slv_reg18, slv_reg17}),
     .phy_tx_start(phy_tx_start),
     .phy_tx_done(phy_tx_done),
     .phy_tx_started(phy_tx_started),
@@ -153,9 +155,9 @@ openofdm_tx_s_axi # (
         .SLV_REG14(slv_reg14),
         .SLV_REG15(slv_reg15),
         .SLV_REG16(slv_reg16),
-        .SLV_REG17(slv_reg17),
+        */.SLV_REG17(slv_reg17),
         .SLV_REG18(slv_reg18),
-        .SLV_REG19(slv_reg19),*/
+        /*.SLV_REG19(slv_reg19),*/
         .SLV_REG20(slv_reg20)/*
         .SLV_REG21(slv_reg21),
         .SLV_REG22(slv_reg22),

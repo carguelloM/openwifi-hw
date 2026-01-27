@@ -227,6 +227,7 @@ set files [list \
  "[file normalize "$origin_dir/src/convenc.v"]"\
  "[file normalize "$origin_dir/src/l_stf_rom.v"]"\
  "[file normalize "$origin_dir/src/l_ltf_rom.v"]"\
+  "[file normalize "$origin_dir/src/l_ltf_ram.v"]"\
  "[file normalize "$origin_dir/src/ht_stf_rom.v"]"\
  "[file normalize "$origin_dir/src/ht_ltf_rom.v"]"\
  "[file normalize "$origin_dir/src/crc32_tx.v"]"\
